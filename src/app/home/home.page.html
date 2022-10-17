@@ -9,12 +9,49 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Calculadora básica</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <ion-input type="number" [(ngModel)]="valor1" placeholder="Introduce un numero">
+    </ion-input>
+    <ion-input type="number" [(ngModel)]="valor2" placeholder="Introduce un numero">
+    </ion-input>
+
+
+    <ion-list >
+      <ion-item>
+        <ion-button expand="block" (click)="calcularSuma()">Sumar</ion-button>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-button expand="block" (click)="calcularResta()">Resta</ion-button>
+
+      </ion-item>
+      <ion-item>
+        <ion-button expand="block" (click)="calcularDivision()">Division</ion-button>
+
+      </ion-item>
+      <ion-item>
+        <ion-button expand="block" (click)="calcularMultiplicacion()">Multiplicacion</ion-button>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-button expand="block" (click)="reinicia()">Hacer otro calculo</ion-button>
+
+      </ion-item>
+    </ion-list>
+
+
+    <ion-card>
+      <ion-card-content *ngIf="(valor1!=null&&valor2!=null)&& (resultado!=NaN)">
+        El resultado es {{resultado}}
+      </ion-card-content>
+    </ion-card>
+
   </div>
 </ion-content>
