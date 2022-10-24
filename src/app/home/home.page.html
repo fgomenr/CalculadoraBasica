@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,37 +15,28 @@
 
   <div id="container">
 
-    <ion-input type="number" [(ngModel)]="valor1" placeholder="Introduce un numero">
-    </ion-input>
-    <ion-input type="number" [(ngModel)]="valor2" placeholder="Introduce un numero">
-    </ion-input>
+    <div class="inputs">
+      <ion-input type="number" [(ngModel)]="valor1" placeholder="Introduce un numero">
+      </ion-input>
+      <ion-input type="number" [(ngModel)]="valor2" placeholder="Introduce un numero">
+      </ion-input>
+    </div>
 
 
-    <ion-list >
-      <ion-item>
-        <ion-button expand="block" (click)="calcularSuma()">Sumar</ion-button>
+    <div class="botones">
 
-      </ion-item>
+      <ion-button expand="block" (click)="calcularSuma()">Sumar</ion-button>
 
-      <ion-item>
-        <ion-button expand="block" (click)="calcularResta()">Resta</ion-button>
 
-      </ion-item>
-      <ion-item>
-        <ion-button expand="block" (click)="calcularDivision()">Division</ion-button>
+      <ion-button expand="block" (click)="calcularResta()">Resta</ion-button>
 
-      </ion-item>
-      <ion-item>
-        <ion-button expand="block" (click)="calcularMultiplicacion()">Multiplicacion</ion-button>
+      <ion-button expand="block" (click)="calcularDivision()">Division</ion-button>
 
-      </ion-item>
+      <ion-button expand="block" (click)="calcularMultiplicacion()">Multiplicacion</ion-button>
 
-      <ion-item>
-        <ion-button expand="block" (click)="reinicia()">Hacer otro calculo</ion-button>
+      <ion-button expand="block" (click)="reinicia()">Hacer otro calculo</ion-button>
 
-      </ion-item>
-    </ion-list>
-
+    </div>
 
     <ion-card>
       <ion-card-content *ngIf="(valor1!=null&&valor2!=null)&& (resultado!=NaN)">

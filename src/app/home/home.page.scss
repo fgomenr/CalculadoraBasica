@@ -1,3 +1,5 @@
+
+
 #container {
   text-align: center;
 
@@ -25,3 +27,132 @@
 #container a {
   text-decoration: none;
 }
+
+.cardLand{
+
+  display:none;
+}
+//mediana
+@media screen and (max-width: 900px) {
+
+  
+  ion-content {
+    --background: lightblue;
+  }
+  ion-header {
+    --background: lightblue;
+  }
+
+  ion-input {
+    --background: lightblue;
+  }
+
+  ion-item {
+    --background: lightblue;
+  }
+  ion-list {
+    background-color: lightblue;
+  }
+
+  ion-title{
+    background-color: lightblue;
+    --color:#ffffff
+  }
+
+  ion-toolbar{
+    --background:lightblue;
+  }
+  ion-button{
+    --background:aqua;
+
+  }
+}
+
+
+//Pequeña
+@media screen and (max-width: 450px) {
+
+  ion-content {
+    --background:Black;
+  }
+  ion-header {
+    --background: Black;
+  }
+
+  ion-input {
+    background-color: rgb(90, 77, 77);
+    color:#ffffff;
+  }
+
+  ion-item {
+    --background: Black;
+  }
+  ion-list {
+    background-color: Black;
+  }
+
+  ion-title{
+    background-color: Black;
+    --color:#ffffff
+  }
+
+  ion-toolbar{
+    --background:black;
+  }
+
+  ion-button{
+    --background:gray;
+
+  }
+}
+
+
+@media (orientation: landscape) {
+
+
+
+  
+  .botones{
+
+justify-content: center;
+    display: flex;
+
+  }
+
+  .inputs{
+
+justify-content: center;
+    display: flex;
+
+  }
+
+
+
+
+  @media screen and (min-width: 1200px) {
+
+    .botones{
+
+      justify-content: center;
+          display: inline;
+      
+        }
+      
+        .inputs{
+      
+      justify-content: center;
+          display: inline;
+      
+        }
+
+
+
+
+  }
+
+
+
+
+}
+
+
